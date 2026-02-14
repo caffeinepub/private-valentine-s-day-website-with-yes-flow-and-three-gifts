@@ -1,0 +1,17 @@
+{
+  "frontend/src/App.tsx": "Main application component that orchestrates authentication flow, allowlist gating, and renders the appropriate screen (sign-in, access denied, or Valentine flow) based on user state.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching and saving user profiles with proper actor dependency handling and cache invalidation.",
+  "frontend/src/hooks/useAllowlistGate.ts": "Custom hook that checks if the authenticated user is allowlisted using the backend's isAllowlisted method with error handling.",
+  "frontend/src/components/auth/SignInScreen.tsx": "Sign-in screen component with Internet Identity login button and romantic Valentine-themed UI with animated hearts.",
+  "frontend/src/components/auth/AccessDeniedScreen.tsx": "Access denied screen shown to authenticated users who are not on the allowlist, with logout functionality.",
+  "frontend/src/components/layout/ValentineLayout.tsx": "Shared layout wrapper that provides consistent Valentine-themed background, decorative floating hearts, and footer with attribution across all screens.",
+  "frontend/src/features/valentine/ValentineFlow.tsx": "State machine component that manages the flow between the question screen and gifts screen.",
+  "frontend/src/features/valentine/QuestionScreen.tsx": "Valentine question screen with \"Yes\" button that advances to gifts and \"No\" button that triggers a repeatable red alarm effect (shake animation, red glow, and flash overlay) for ~1.5 seconds without navigation.",
+  "frontend/src/features/valentine/GiftsScreen.tsx": "Gifts selection screen showing four gift cards (Gift 1, Gift 2, Gift 3, Gift 4) with navigation to individual gift reveal components and updated header text indicating four gifts.",
+  "frontend/src/features/valentine/gifts/Gift1Song.tsx": "Gift 1 component with audio player for \"Kade Milke Betho\" song (using Admirin_You_1.mp3 from assets) and scrollable lyrics display with proper line breaks, using generic \"Gift 1\" label.",
+  "frontend/src/features/valentine/gifts/Gift2Bouquet.tsx": "Gift 2 component displaying the generated flower bouquet image with romantic messaging.",
+  "frontend/src/features/valentine/gifts/Gift3Message.tsx": "Gift 3 component with editable textarea for a romantic message and reveal/edit functionality, now displaying the updated personalized Valentine message addressed to Rishita with emojis throughout the text about friendship, memorable days, frustrations, and returning from Ambala.",
+  "frontend/src/index.css": "Global styles with Valentine-themed OKLCH color system (warm cream background, deep red accents) for both light and dark modes, plus custom typography.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Valentine color tokens, custom font families (Inter for body, Georgia for headings), design system tokens, and alarm-style animations (shake and flash) for the \"No\" button feedback.",
+  "frontend/src/features/valentine/gifts/Gift4Poem.tsx": "Gift 4 component displaying a romantic Hindi poem with emphasized visual styling (gradient background, larger typography, decorative hearts) as the focal point, preceded by the opening line \"I write this for you hope you like it\"."
+}

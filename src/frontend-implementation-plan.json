@@ -1,0 +1,44 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Red alarm-style feedback on Valentine Question 'No' click",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Enable the 'No' button on the Valentine Question screen and trigger a repeatable red alarm-style visual feedback on click without navigating away.",
+      "acceptanceCriteria": [
+        "On the Question screen, the \"No\" button is clickable (not disabled).",
+        "Clicking \"No\" does not transition to the gifts screen and does not refresh the page.",
+        "After clicking \"No\", a clearly visible alarm-like red feedback occurs (red styling + motion/flash) and then returns to the normal state automatically after a short duration (e.g., ~1–2 seconds).",
+        "The effect can be triggered repeatedly on subsequent clicks without breaking the layout."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/features/valentine/QuestionScreen.tsx",
+          "operation": "modify",
+          "description": "Implement local UI state for an 'alarm' moment when the No button is clicked: remove the disabled/aria-disabled behavior, add an onClick handler that triggers a short-lived alarm state (~1–2s) with a timeout cleanup, and apply alarm classes for shake/glow/red styling plus a brief red flash overlay while keeping the Yes flow unchanged (No must not call onYes)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add Tailwind/global CSS animations and utility classes needed for the alarm red shake/glow/flash effect in a brief, accessible way (light/dark friendly).",
+      "acceptanceCriteria": [
+        "The alarm animation styles are defined in project styles (e.g., frontend/src/index.css and/or Tailwind configuration) and are applied via class names in the Question screen component.",
+        "The animation works in both light and dark mode and remains readable/accessible (no permanent high-contrast flashing; effect is brief)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with keyframes/animations for an alarm-style shake and a subtle red pulse/glow to be applied via class names on the No button and/or its wrapper (keep durations brief and non-continuous)."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add any required global utility styles (via existing Tailwind layers) for the alarm flash overlay and any non-keyframe helpers (e.g., overlay color using destructive/red tokens with safe opacity), ensuring the effect is brief and looks acceptable in both light and dark mode."
+        }
+      ]
+    }
+  ]
+}
