@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "New project",
   "architectural_notes": [],
   "known_issues": [],
@@ -12,6 +12,14 @@
       "summary": "Restore the codebase to the exact state of Version 3",
       "reqIds": [
         "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Restore all backend and frontend code files to their exact state as they existed in Version 3 draft",
+      "reqIds": [
+        "REQ-2"
       ],
       "status": "pending"
     }

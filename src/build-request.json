@@ -1,26 +1,36 @@
 {
   "kind": "build_request",
-  "title": "Revert to Version 3",
-  "priority": "normal",
+  "title": "Restore codebase to Version 3 state",
+  "priority": "high",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Restore the codebase to the exact state of Version 3",
+      "id": "REQ-2",
+      "text": "Restore all backend and frontend code files to their exact state as they existed in Version 3 draft",
       "target": "both",
       "source": {
         "messageIds": [
           "msg-latest"
+        ],
+        "quotes": [
+          "i want you to give me the version 3 draft that i made earlier"
         ]
       },
       "acceptanceCriteria": [
-        "All backend files match Version 3 state",
-        "All frontend files match Version 3 state",
-        "Version number reflects reversion to Version 3"
+        "All files match the exact content from Version 3",
+        "No features or changes from later versions remain in the codebase",
+        "The application functions identically to Version 3"
       ]
     }
   ],
-  "constraints": [],
-  "nonGoals": [],
+  "constraints": [
+    "Must revert to Version 3 exactly without modifications",
+    "Do not preserve any changes made in versions after Version 3"
+  ],
+  "nonGoals": [
+    "Updating or improving Version 3 code",
+    "Merging features from later versions",
+    "Applying bug fixes not present in Version 3"
+  ],
   "imageRequirements": {
     "required": [],
     "edits": []

@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-22T20:24:40.269Z",
+  "generatedAt": "2026-02-22T20:45:28.615Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,31 +11,29 @@
     "implemented": 0,
     "items": [
       {
-        "id": "REQ-1",
-        "summary": "Restore the codebase to the exact state of Version 3",
+        "id": "REQ-2",
+        "summary": "Restore all backend and frontend code files to their exact state as they existed in Version 3 draft",
         "status": "missing",
         "plannedFiles": [
           "frontend/src/App.tsx",
-          "frontend/src/components/auth/AccessDeniedScreen.tsx",
           "frontend/src/components/auth/SignInScreen.tsx",
+          "frontend/src/components/auth/AccessDeniedScreen.tsx",
           "frontend/src/components/layout/ValentineLayout.tsx",
-          "frontend/src/features/valentine/QuestionScreen.tsx",
           "frontend/src/features/valentine/ValentineFlow.tsx",
+          "frontend/src/features/valentine/QuestionScreen.tsx",
           "frontend/src/features/valentine/GiftsScreen.tsx",
           "frontend/src/features/valentine/gifts/Gift1Song.tsx",
           "frontend/src/features/valentine/gifts/Gift2Bouquet.tsx",
           "frontend/src/features/valentine/gifts/Gift3Message.tsx",
           "frontend/src/features/valentine/gifts/Gift4Poem.tsx",
           "frontend/src/hooks/useActor.ts",
-          "frontend/src/hooks/useAllowlistGate.ts",
           "frontend/src/hooks/useInternetIdentity.ts",
+          "frontend/src/hooks/useAllowlistGate.ts",
           "frontend/src/hooks/useQueries.ts",
-          "frontend/src/utils/urlParams.ts",
-          "frontend/src/index.css",
           "frontend/src/main.tsx",
+          "frontend/src/index.css",
           "frontend/tailwind.config.js",
-          "frontend/index.html",
-          "frontend/index.css"
+          "frontend/index.html"
         ],
         "matchedFiles": []
       }
@@ -43,10 +41,8 @@
   },
   "changedFiles": [
     "build-request.json",
-    "caffeine.lock.json",
     "feature_evidence.json",
     "frontend-implementation-plan.json",
-    "frontend/src/config.ts",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

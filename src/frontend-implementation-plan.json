@@ -1,21 +1,26 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Revert Frontend to Version 3",
+  "title": "Restore codebase to Version 3 state",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Restore all frontend files to their exact Version 3 state",
+      "id": "REQ-2",
+      "summary": "Restore all frontend code files to their exact state as they existed in Version 3 draft",
       "acceptanceCriteria": [
-        "All frontend files match Version 3 state",
-        "Version number reflects reversion to Version 3",
-        "Application functionality matches Version 3 behavior"
+        "All files match the exact content from Version 3",
+        "No features or changes from later versions remain in the codebase",
+        "The application functions identically to Version 3"
       ],
       "file_operations": [
         {
           "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Restore App.tsx to Version 3 state including authentication flow, allowlist checks, and routing logic"
+          "description": "Restore App.tsx to Version 3 state with original authentication flow and component structure"
+        },
+        {
+          "path": "frontend/src/components/auth/SignInScreen.tsx",
+          "operation": "modify",
+          "description": "Restore SignInScreen component to Version 3 implementation"
         },
         {
           "path": "frontend/src/components/auth/AccessDeniedScreen.tsx",
@@ -23,54 +28,54 @@
           "description": "Restore AccessDeniedScreen component to Version 3 implementation"
         },
         {
-          "path": "frontend/src/components/auth/SignInScreen.tsx",
-          "operation": "modify",
-          "description": "Restore SignInScreen component to Version 3 implementation with Internet Identity integration"
-        },
-        {
           "path": "frontend/src/components/layout/ValentineLayout.tsx",
           "operation": "modify",
-          "description": "Restore ValentineLayout to Version 3 state including background art references and layout structure"
-        },
-        {
-          "path": "frontend/src/features/valentine/QuestionScreen.tsx",
-          "operation": "modify",
-          "description": "Restore QuestionScreen to Version 3 implementation including animation logic and interaction handlers"
+          "description": "Restore ValentineLayout component to Version 3 implementation"
         },
         {
           "path": "frontend/src/features/valentine/ValentineFlow.tsx",
           "operation": "modify",
-          "description": "Restore ValentineFlow state management to Version 3 behavior"
+          "description": "Restore ValentineFlow state machine to Version 3 implementation"
+        },
+        {
+          "path": "frontend/src/features/valentine/QuestionScreen.tsx",
+          "operation": "modify",
+          "description": "Restore QuestionScreen component to Version 3 implementation"
         },
         {
           "path": "frontend/src/features/valentine/GiftsScreen.tsx",
           "operation": "modify",
-          "description": "Restore GiftsScreen to Version 3 implementation including gift selection interface"
+          "description": "Restore GiftsScreen component to Version 3 implementation"
         },
         {
           "path": "frontend/src/features/valentine/gifts/Gift1Song.tsx",
           "operation": "modify",
-          "description": "Restore Gift1Song audio player component to Version 3 state"
+          "description": "Restore Gift1Song component to Version 3 implementation"
         },
         {
           "path": "frontend/src/features/valentine/gifts/Gift2Bouquet.tsx",
           "operation": "modify",
-          "description": "Restore Gift2Bouquet virtual bouquet component to Version 3 state"
+          "description": "Restore Gift2Bouquet component to Version 3 implementation"
         },
         {
           "path": "frontend/src/features/valentine/gifts/Gift3Message.tsx",
           "operation": "modify",
-          "description": "Restore Gift3Message editable message component to Version 3 state"
+          "description": "Restore Gift3Message component to Version 3 implementation"
         },
         {
           "path": "frontend/src/features/valentine/gifts/Gift4Poem.tsx",
           "operation": "modify",
-          "description": "Restore Gift4Poem formatted poem display to Version 3 state"
+          "description": "Restore Gift4Poem component to Version 3 implementation"
         },
         {
           "path": "frontend/src/hooks/useActor.ts",
           "operation": "modify",
-          "description": "Restore useActor hook to Version 3 implementation including actor management and identity handling"
+          "description": "Restore useActor hook to Version 3 implementation"
+        },
+        {
+          "path": "frontend/src/hooks/useInternetIdentity.ts",
+          "operation": "modify",
+          "description": "Restore useInternetIdentity hook to Version 3 implementation"
         },
         {
           "path": "frontend/src/hooks/useAllowlistGate.ts",
@@ -78,44 +83,29 @@
           "description": "Restore useAllowlistGate hook to Version 3 implementation"
         },
         {
-          "path": "frontend/src/hooks/useInternetIdentity.ts",
-          "operation": "modify",
-          "description": "Restore useInternetIdentity authentication hook to Version 3 state"
-        },
-        {
           "path": "frontend/src/hooks/useQueries.ts",
           "operation": "modify",
-          "description": "Restore useQueries profile data hooks to Version 3 implementation"
-        },
-        {
-          "path": "frontend/src/utils/urlParams.ts",
-          "operation": "modify",
-          "description": "Restore urlParams utility helpers to Version 3 state"
-        },
-        {
-          "path": "frontend/src/index.css",
-          "operation": "modify",
-          "description": "Restore global styles and Tailwind configuration to Version 3 state including theme variables and utilities"
+          "description": "Restore useQueries hook to Version 3 implementation"
         },
         {
           "path": "frontend/src/main.tsx",
           "operation": "modify",
-          "description": "Restore React app bootstrap file to Version 3 state including provider setup"
+          "description": "Restore main.tsx entry point to Version 3 implementation"
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Restore index.css styles to Version 3 implementation"
         },
         {
           "path": "frontend/tailwind.config.js",
           "operation": "modify",
-          "description": "Restore Tailwind configuration to Version 3 state including custom colors, animations, and theme extensions"
+          "description": "Restore Tailwind configuration to Version 3 implementation"
         },
         {
           "path": "frontend/index.html",
           "operation": "modify",
-          "description": "Restore HTML entrypoint to Version 3 state"
-        },
-        {
-          "path": "frontend/index.css",
-          "operation": "modify",
-          "description": "Restore Tailwind base styles to Version 3 state"
+          "description": "Restore index.html to Version 3 implementation"
         }
       ]
     }
