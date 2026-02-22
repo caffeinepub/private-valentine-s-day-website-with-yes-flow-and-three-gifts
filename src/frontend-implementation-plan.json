@@ -1,42 +1,121 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Red alarm-style feedback on Valentine Question 'No' click",
+  "title": "Revert Frontend to Version 3",
   "requirements": [
     {
       "id": "REQ-1",
-      "summary": "Enable the 'No' button on the Valentine Question screen and trigger a repeatable red alarm-style visual feedback on click without navigating away.",
+      "summary": "Restore all frontend files to their exact Version 3 state",
       "acceptanceCriteria": [
-        "On the Question screen, the \"No\" button is clickable (not disabled).",
-        "Clicking \"No\" does not transition to the gifts screen and does not refresh the page.",
-        "After clicking \"No\", a clearly visible alarm-like red feedback occurs (red styling + motion/flash) and then returns to the normal state automatically after a short duration (e.g., ~1–2 seconds).",
-        "The effect can be triggered repeatedly on subsequent clicks without breaking the layout."
+        "All frontend files match Version 3 state",
+        "Version number reflects reversion to Version 3",
+        "Application functionality matches Version 3 behavior"
       ],
       "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Restore App.tsx to Version 3 state including authentication flow, allowlist checks, and routing logic"
+        },
+        {
+          "path": "frontend/src/components/auth/AccessDeniedScreen.tsx",
+          "operation": "modify",
+          "description": "Restore AccessDeniedScreen component to Version 3 implementation"
+        },
+        {
+          "path": "frontend/src/components/auth/SignInScreen.tsx",
+          "operation": "modify",
+          "description": "Restore SignInScreen component to Version 3 implementation with Internet Identity integration"
+        },
+        {
+          "path": "frontend/src/components/layout/ValentineLayout.tsx",
+          "operation": "modify",
+          "description": "Restore ValentineLayout to Version 3 state including background art references and layout structure"
+        },
         {
           "path": "frontend/src/features/valentine/QuestionScreen.tsx",
           "operation": "modify",
-          "description": "Implement local UI state for an 'alarm' moment when the No button is clicked: remove the disabled/aria-disabled behavior, add an onClick handler that triggers a short-lived alarm state (~1–2s) with a timeout cleanup, and apply alarm classes for shake/glow/red styling plus a brief red flash overlay while keeping the Yes flow unchanged (No must not call onYes)."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Add Tailwind/global CSS animations and utility classes needed for the alarm red shake/glow/flash effect in a brief, accessible way (light/dark friendly).",
-      "acceptanceCriteria": [
-        "The alarm animation styles are defined in project styles (e.g., frontend/src/index.css and/or Tailwind configuration) and are applied via class names in the Question screen component.",
-        "The animation works in both light and dark mode and remains readable/accessible (no permanent high-contrast flashing; effect is brief)."
-      ],
-      "file_operations": [
+          "description": "Restore QuestionScreen to Version 3 implementation including animation logic and interaction handlers"
+        },
         {
-          "path": "frontend/tailwind.config.js",
+          "path": "frontend/src/features/valentine/ValentineFlow.tsx",
           "operation": "modify",
-          "description": "Extend Tailwind theme with keyframes/animations for an alarm-style shake and a subtle red pulse/glow to be applied via class names on the No button and/or its wrapper (keep durations brief and non-continuous)."
+          "description": "Restore ValentineFlow state management to Version 3 behavior"
+        },
+        {
+          "path": "frontend/src/features/valentine/GiftsScreen.tsx",
+          "operation": "modify",
+          "description": "Restore GiftsScreen to Version 3 implementation including gift selection interface"
+        },
+        {
+          "path": "frontend/src/features/valentine/gifts/Gift1Song.tsx",
+          "operation": "modify",
+          "description": "Restore Gift1Song audio player component to Version 3 state"
+        },
+        {
+          "path": "frontend/src/features/valentine/gifts/Gift2Bouquet.tsx",
+          "operation": "modify",
+          "description": "Restore Gift2Bouquet virtual bouquet component to Version 3 state"
+        },
+        {
+          "path": "frontend/src/features/valentine/gifts/Gift3Message.tsx",
+          "operation": "modify",
+          "description": "Restore Gift3Message editable message component to Version 3 state"
+        },
+        {
+          "path": "frontend/src/features/valentine/gifts/Gift4Poem.tsx",
+          "operation": "modify",
+          "description": "Restore Gift4Poem formatted poem display to Version 3 state"
+        },
+        {
+          "path": "frontend/src/hooks/useActor.ts",
+          "operation": "modify",
+          "description": "Restore useActor hook to Version 3 implementation including actor management and identity handling"
+        },
+        {
+          "path": "frontend/src/hooks/useAllowlistGate.ts",
+          "operation": "modify",
+          "description": "Restore useAllowlistGate hook to Version 3 implementation"
+        },
+        {
+          "path": "frontend/src/hooks/useInternetIdentity.ts",
+          "operation": "modify",
+          "description": "Restore useInternetIdentity authentication hook to Version 3 state"
+        },
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Restore useQueries profile data hooks to Version 3 implementation"
+        },
+        {
+          "path": "frontend/src/utils/urlParams.ts",
+          "operation": "modify",
+          "description": "Restore urlParams utility helpers to Version 3 state"
         },
         {
           "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Add any required global utility styles (via existing Tailwind layers) for the alarm flash overlay and any non-keyframe helpers (e.g., overlay color using destructive/red tokens with safe opacity), ensuring the effect is brief and looks acceptable in both light and dark mode."
+          "description": "Restore global styles and Tailwind configuration to Version 3 state including theme variables and utilities"
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Restore React app bootstrap file to Version 3 state including provider setup"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Restore Tailwind configuration to Version 3 state including custom colors, animations, and theme extensions"
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Restore HTML entrypoint to Version 3 state"
+        },
+        {
+          "path": "frontend/index.css",
+          "operation": "modify",
+          "description": "Restore Tailwind base styles to Version 3 state"
         }
       ]
     }

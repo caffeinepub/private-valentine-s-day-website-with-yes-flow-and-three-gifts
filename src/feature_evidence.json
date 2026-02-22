@@ -1,43 +1,4 @@
 {
   "kind": "feature_evidence_report",
-  "features": [
-    {
-      "featureId": "feature-update-the-valentine-question-screen-so-the-no-button-is-enabled-and-when-clicked-triggers-a-noticeable-red-alarm-visual-feedback-e-g-button-turns-red-with-a-red-ring-glow-and-shakes-and-or-a-brief-red-screen-flash-overlay-without-navigating-away-from-the-question-screen",
-      "featureTitle": "Update the Valentine question screen so the \"No\" button is enabled and, when clicked, triggers a noticeable red \"alarm\" visual feedback (e.g., button turns red with a red ring/glow and shakes, and/or a brief red screen flash overlay) without navigating away from the question screen.",
-      "files": [
-        "frontend/src/features/valentine/QuestionScreen.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-any-required-css-keyframes-utility-classes-to-support-the-red-alarm-feedback-animation-s-used-by-the-no-click-behavior-using-the-existing-tailwind-global-styling-approach-in-this-project",
-      "featureTitle": "Add any required CSS (keyframes/utility classes) to support the red alarm feedback animation(s) used by the \"No\" click behavior, using the existing Tailwind/global styling approach in this project.",
-      "files": [
-        "frontend/tailwind.config.js"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    }
-  ]
+  "features": []
 }

@@ -1,54 +1,26 @@
 {
   "kind": "build_request",
-  "title": "Add red alarm-style feedback when the 'No' button is clicked",
+  "title": "Revert to Version 3",
   "priority": "normal",
   "requirements": [
     {
       "id": "REQ-1",
-      "text": "Update the Valentine question screen so the \"No\" button is enabled and, when clicked, triggers a noticeable red \"alarm\" visual feedback (e.g., button turns red with a red ring/glow and shakes, and/or a brief red screen flash overlay) without navigating away from the question screen.",
-      "target": "frontend",
+      "text": "Restore the codebase to the exact state of Version 3",
+      "target": "both",
       "source": {
         "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "can you add that whenever it clicked no it shows red like alarm"
+          "msg-latest"
         ]
       },
       "acceptanceCriteria": [
-        "On the Question screen, the \"No\" button is clickable (not disabled).",
-        "Clicking \"No\" does not transition to the gifts screen and does not refresh the page.",
-        "After clicking \"No\", a clearly visible alarm-like red feedback occurs (red styling + motion/flash) and then returns to the normal state automatically after a short duration (e.g., ~1–2 seconds).",
-        "The effect can be triggered repeatedly on subsequent clicks without breaking the layout."
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Add any required CSS (keyframes/utility classes) to support the red alarm feedback animation(s) used by the \"No\" click behavior, using the existing Tailwind/global styling approach in this project.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "can you add that whenever it clicked no it shows red like alarm"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The alarm animation styles are defined in project styles (e.g., frontend/src/index.css and/or Tailwind configuration) and are applied via class names in the Question screen component.",
-        "The animation works in both light and dark mode and remains readable/accessible (no permanent high-contrast flashing; effect is brief)."
+        "All backend files match Version 3 state",
+        "All frontend files match Version 3 state",
+        "Version number reflects reversion to Version 3"
       ]
     }
   ],
-  "constraints": [
-    "Do not modify files under frontend/src/components/ui (read-only UI primitives).",
-    "Do not modify any files listed as immutable in SYSTEM_CONTEXT (e.g., frontend/src/hooks/useInternetIdentity.ts/tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx).",
-    "Keep all backend logic unchanged (no backend changes required for this UI-only behavior)."
-  ],
-  "nonGoals": [
-    "Adding new backend endpoints or storing the \"No\" click event.",
-    "Changing the existing \"Yes\" flow behavior or gift navigation beyond what is required to keep \"No\" on the question screen."
-  ],
+  "constraints": [],
+  "nonGoals": [],
   "imageRequirements": {
     "required": [],
     "edits": []

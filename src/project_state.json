@@ -5,33 +5,18 @@
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "existing_features": [
-    {
-      "id": "feature-update-the-valentine-question-screen-so-the-no-button-is-enabled-and-when-clicked-triggers-a-noticeable-red-alarm-visual-feedback-e-g-button-turns-red-with-a-red-ring-glow-and-shakes-and-or-a-brief-red-screen-flash-overlay-without-navigating-away-from-the-question-screen",
-      "title": "Update the Valentine question screen so the \"No\" button is enabled and, when clicked, triggers a noticeable red \"alarm\" visual feedback (e.g., button turns red with a red ring/glow and shakes, and/or a brief red screen flash overlay) without navigating away from the question screen.",
-      "reqIds": [
-        "REQ-1"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-any-required-css-keyframes-utility-classes-to-support-the-red-alarm-feedback-animation-s-used-by-the-no-click-behavior-using-the-existing-tailwind-global-styling-approach-in-this-project",
-      "title": "Add any required CSS (keyframes/utility classes) to support the red alarm feedback animation(s) used by the \"No\" click behavior, using the existing Tailwind/global styling approach in this project.",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
-    }
-  ],
+  "existing_features": [],
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "When user clicks/selects 'No', show a red alarm-style visual indicator/feedback",
-      "reqIds": [],
+      "summary": "Restore the codebase to the exact state of Version 3",
+      "reqIds": [
+        "REQ-1"
+      ],
       "status": "pending"
     }
   ],
-  "projectName": "Add red alarm-style feedback when the 'No' button is clicked",
+  "projectName": "Revert to Version 3",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }
